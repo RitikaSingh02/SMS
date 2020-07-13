@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	 <meta charset="UTF-8">
+    <title>STUDENT MANAGEMENT SYSTEM</title>
+    <link rel='icon' type='png' href='C:\Users\ritik\Desktop\icon.png'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    
+
+
+<link rel="stylesheet" type="text/css" href="login.css">
+
+<script src="changepassword.js"></script>
+
+</head>
+
+<body align="center">
+  <br>
+  <br>
+  <br>
+  <div ng-app="student" ng-controller="student_ctrl">
+  <button class="button"><span>VIEW DETAILS</span></button>
+  <br>
+  <br>
+  
+  <table id="table" align="center" class = "table table-hover"> 
+    <tr>
+      <th>USER_NAME</th>
+      <th>PASSWORD</th>
+      <th>FATHER_NAME</th>
+      <th>EMAIL</th>
+      <th>BRANCH</th>
+      <TH>CONTACT_NO</TH>
+    </tr>
+    <tr ng-repeat="x in students">
+      <td>
+          {{x.USER_NAME}}
+      </td>
+      <td>
+          {{x.PASSWORD}}
+      </td>
+      <td>
+          {{x.father_name}}
+      </td>
+      <td>
+          {{x.email}}
+      </td>
+      <td>
+          {{x.branch}}
+      </td>
+      <td>
+          {{x.phone_no}}
+      </td>
+      
+  </table>
+  <br><br><br>
+
+  
+  
+
+      
+<script>
+   var pos='';
+      
+      function redirect(){
+          
+              window.open(
+              "raise_query_student.html"+pos,
+               '_blank'
+
+              );
+            }
+      function password(){
+        loc=window.location.href;
+        pos=loc.split('=')[1];
+        window.open(
+          "changepassword.html?un="+pos,
+          '_blank'
+  
+        );
+      }
+      function logout(){
+        window.location.href="http://localhost/files/portallogin.html";
+      }
+      function query(){
+        loc=window.location.href;
+        pos=loc.split('=')[1];
+        var xmlhttp=new XMLHttpRequest();
+        var url="http://127.0.0.1:8000/users/query_raisal/";
+        xmlhttp.open("POST", url, true);
+        xmlhttp.setRequestHeader("Content-Type", "application/json");
+        xmlhttp.onreadystatechange = function() {
+        xmlhttp.onload=function(){
+        if (this.readyState == 4 && this.status == 200) {
+          
+            data=JSON.parse(this.response);
+            alert(data);
+      }
+      }
+      }
+      var USER_NAME=current_url.split('=')[1];
+      var data=JSON.stringify({'USER_NAME':USER_NAME});
+      xmlhttp.send(data);
+
+      }
+      </script>
+
+<button id="change_password" class="button" onclick="password()"><span>CHANGE PASSWORD</span></button><br><br>
+<button id="quer_raise" class="button" onclick="query()"><span>RAISE QUERY</span></button><br><br>
+<td><button class="button"  ng-click="redirect()"><span>CLICK TO UPDATE</span></button>
+<button class="button" onclick="logout()"><span>LOGOUT</span></button>
+</div>
+
+</body>

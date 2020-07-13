@@ -1,10 +1,11 @@
 angular.module('update', []).controller('updateCtrl', function($scope,$http) {
-
+  console.log("url");
     var url = document.location.href;
-    console.log(url);
+    console.log("url");
+    console.log("USER_NAME");
     var params = url.split('?');
-    console.log(params);
- //   $scope.USER_NAME=params[1];
+    $scope.USER_NAME=params[1];
+    console.log("USER_NAME");
     $scope.father_name=params[2];
     $scope.email=params[3];
     $scope.branch=params[4];
