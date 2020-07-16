@@ -1,0 +1,41 @@
+<head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<title>ANSWER QUERY</title>
+
+<link rel='icon' type='jpg' href='icon.jpg'>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="login.css">
+<script src="ans_query.js"></script>
+
+</head>
+<body>
+<div ng-app="query" ng-controller="query_ctrl" align="center">
+    <ul>
+        <li><b><button class="button">QUERY PORTAL</li>
+    </ul>
+<br><br><br><br>
+<table border="1" width="100%" class = "table table-hover">
+        <tr>
+            <th>USER_NAME</th>
+            <th>DATE OF QUERY</th>
+            <th>APPROVE REQUEST</th>
+            <th>REJECT REQUEST</th>
+        </tr>
+        <tr ng-repeat="x in students">
+            <td>
+                {{x.USER_NAME}}
+            </td>
+            <td>
+                {{x.date}}
+            </td>
+            <td>
+                <button  class="btn btn-success" ng-click="accept(x.USER_NAME)">APPROVE</button></td>    
+            </td>
+            <td><button  class="btn btn-danger" ng-click="reject(x.USER_NAME)">REJECT</button>
+            </td>
+        </tr>
+</table> 
+</div>
+    </body>
+

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <title>WELCOME TEACHER</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<link rel='icon' type='jpg' href='icon.jpg'>
+<script src="backend_angular.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="login.css">
+
+<body>
+    <div ng-app="myApp" ng-controller="namesCtrl" align="center">
+    <ul>
+        <li><b><button class="button" ng-click="login()">WELCOME FACULTY</li>
+        <li><button class="button" ng-click="insert()"><span>INSERT STUDENT</span></button>
+        <li><button class="button" ng-click="query()"><span>ANS QUERY</span></li>
+        <li><button class="button" ng-click="redirect()"><span>LOGOUT</span></button></li>
+    </ul>
+    
+    
+    <br>
+    <br>
+    <br>
+    <br>
+        <table border="1"  class = "table table-hover">
+            <tr>
+                <th>USER_NAME</th>
+                <th>FATHER_NAME</th>
+                <th>EMAIL</th>
+                <th>BRANCH</th>
+                <TH>CONTACT_NO</TH>
+                <TH>UPDATE</TH>
+                <TH>DELETE</TH>
+
+            </tr>
+        <tr ng-repeat="x in students">
+        <td>
+            {{x.USER_NAME}}
+        </td>
+        <td>
+            {{x.father_name}}
+        </td>
+        <td>
+            {{x.email}}
+        </td>
+        <td>
+            {{x.branch}}
+        </td>
+        <td>
+            {{x.phone_no}}
+        </td>
+        <td>
+        <button  class="btn btn-success" ng-click="updation(x.USER_NAME,x.father_name,x.email,x.branch,x.phone_no)">UPDATE</button></td>
+                
+        </td>
+        <td><button  class="btn btn-danger" ng-click="deletion(x.USER_NAME)">DELETE</button>
+        </td>
+        </tr>
+        </table>
+        
+        <br><br>
+        <br><br><br>
+
+    <br><br> 
+        </div>
+
+</body> 
+
+
+</html>
