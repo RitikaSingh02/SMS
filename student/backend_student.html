@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	 <meta charset="UTF-8">
+    <title>STUDENT MANAGEMENT SYSTEM</title>
+    <link rel='icon' type='jpg' href='icon.jpg'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>    
+    <link rel="stylesheet" type="text/css" href="login.css">
+    <script src="backend_student.js"></script>
+</head>
+
+<body align="center">
+  <div ng-app="student" ng-controller="student_ctrl">
+
+  <ul>
+
+    <li><b><button class="button" ng-click="login()">WELCOME TO STUDENT PORTAL</li>
+    <li><button class="button" ng-click="query()"><span>RAISE QUERY</span></button><br><br></li>
+    <li><button class="button" ng-click="logout()"><span >LOGOUT</span></button>
+    
+    
+  </ul>
+  <br>
+  <br>
+  <br>
+
+  <br>
+  <br>
+  
+  <table id="table" align="center" class = "table table-hover"> 
+    <b>
+    <tr>
+      <th>USER_NAME</th>
+      <th>PASSWORD</th>
+      <th>FATHER_NAME</th>
+      <th>EMAIL</th>
+      <th>BRANCH</th>
+      <TH>CONTACT_NO</TH>
+      <th>QUERY STATUS</th>
+    </tr>
+    <tr ng-repeat="x in students">
+      <td>
+          {{x.USER_NAME}}
+      </td>
+      <td>
+          {{x.PASSWORD}}
+      </td>
+      <td>
+          {{x.father_name}}
+      </td>
+      <td>
+          {{x.email}}
+      </td>
+      <td>
+          {{x.branch}}
+      </td>
+      <td>
+          {{x.phone_no}}
+      </td>
+      <td>
+        {{x.STATUS}}
+      </td>
+    
+    </b>
+  </table>
+  <br><br><br>
+ 
+<button id="change_password" class="button" ng-click="password()"><span>CHANGE PASSWORD</span></button><br><br>
+<div ng-show="x.STATUS==PENDING">
+<button class="button"  ng-click="redirect(x.USER_NAME,x.father_name,x.email,x.branch,x.phone_no)"><span>CLICK TO UPDATE</span></button>
+</div>
+</tr>
+</div>
+
+</body>
