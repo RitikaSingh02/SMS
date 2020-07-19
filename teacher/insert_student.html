@@ -5,14 +5,18 @@
     <title>STUDENT MANAGEMENT SYSTEM</title>
     <link rel='icon' type='png' href='C:\Users\ritik\Desktop\icon.png'>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel='icon' type='jpg' href='icon.jpg'>   
 <script src="insert_student.js"></script>
 
-<link rel="stylesheet" type="text/css" href="update.css">
+<link rel="stylesheet" type="text/css" href="insert.css">
 </head>
 
-    <div class="main" ng-app="insert" ng-controller="insert_ctrl">
-  	
+    <div  ng-app="insert" ng-controller="insert_ctrl">
+        <ul>
+            <li>  <b><button class="button" ng-click="login()">FACULTY PORTAL</button></b></li>
+        </ul>
+        <div class="main">
         <p class="sign" align="center">INSERT A STUDENT</p>
         
         <input class="un" type="text" align="center" ng-model="USER_NAME"  placeholder="USER_NAME" required><br>
@@ -22,5 +26,5 @@
         <input class="cn" type="text" align="center" ng-model="phone_no" placeholder="CONTACT NUMBER" required><br>
      
         <button class ="button1" id="login" ng-click="submitfun()"><span>INSERT</span></button> 
-    
+    </div>
 </div>

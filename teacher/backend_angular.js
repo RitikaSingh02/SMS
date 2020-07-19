@@ -1,5 +1,5 @@
 angular.module('myApp', []).controller('namesCtrl', function($scope,$http) {
-    $http.get("http://127.0.0.1:8000/users/students/").then(function(response){
+    $http.get("http://c4ab8373969c.ngrok.io/teacher/students/").then(function(response){
         $scope.students=response.data;
         console.log(response.data);
             
@@ -10,7 +10,7 @@ angular.module('myApp', []).controller('namesCtrl', function($scope,$http) {
     var data = {"USER_NAME":USER_NAME}
     console.log(data);
      
-    $http.post('http://127.0.0.1:8000/users/delete/', JSON.stringify(data)).then(function (response) {
+    $http.post('http://c4ab8373969c.ngrok.io/teacher/delete/', JSON.stringify(data)).then(function (response) {
     
     if (response.data)
     location.reload();
@@ -24,25 +24,24 @@ angular.module('myApp', []).controller('namesCtrl', function($scope,$http) {
     $scope.updation  =function(USER_NAME,father_name,email,branch,phone_no){
     var data={"USER_NAME":USER_NAME,"father_name":father_name,"email":email,"branch":branch,"phone_no":phone_no};
 
-        url='student_update.html?'+USER_NAME+'?'+father_name+'?'+email+'?'+branch+'?'+phone_no;
-        window.open(url,
-            "_blank");
+        url='teacher_update.html?'+USER_NAME+'?'+father_name+'?'+email+'?'+branch+'?'+phone_no;
+        window.location.href=url;
         if (response.data)
         console.log(response.data);         
     
     }
 
     $scope.redirect=function(){
-        window.location.href="portallogin.html";
+        window.location.replace("portallogin.html");
     };
     $scope.insert=function(){
-        window.open("insert_student.html");
+        window.location.href="insert_student.html";
     };
     $scope.query=function(){
-        window.open("ans_query.html");
+        window.location.href="ans_query.html";
     }
     $scope.login=function(){
-        window.location.href="login_teacher.html"
+        window.location.replace("login_teacher.html");
     }
     }
     );

@@ -1,314 +1,163 @@
 body {
-    background-image:url("bachelor.jpeg") ;
-    font-family: 'Ubuntu', Monospace;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    width:100%;
-    background-position:  bottom right;
-  
+  font-family: 'Ubuntu', Monospace;
+ 
 }
 .button {
-    border-radius: 4px;
-    background-color: black;
-    border: none;
-    color: #FFFFFF;
-    text-align: center;
-    font-size: 20px;
-    padding: 9px;
-    width: 200px;
-    transition: all 0.5s;
-    cursor: pointer;
-    margin: 5px;
-  }
-  .button1 {
-    border-radius: 4px;
-    background-color: black;
-    border: none;
-    color: #FFFFFF;
-    text-align: center;
-    font-size: 30px;
-    padding: 20px;
-    width: 200px;
-    cursor: pointer;
-    margin: 95px;
-    
-  }
-  .button1 span {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
-  }
-  
-  .button1 span:after {
-    content: '\00bb';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -20px;
-    transition: 0.5s;
-  }
-  
-  .button1:hover span {
-    padding-right: 25px;
-  }
-  
-  .button1:hover span:after {
-    opacity: 1;
-    right: 0;
-  }
-  .button span {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
-  }
-  
-  .button span:after {
-    content: '\00bb';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -20px;
-    transition: 0.5s;
-  }
-  
-  .button:hover span {
-    padding-right: 25px;
-  }
-  
-  .button:hover span:after {
-    opacity: 1;
-    right: 0;
-  }
-.main {
-    background-color:white;
-    width: 500px;
-    height: 500px;
-    margin: 7em auto;
-    transition:.3s;
-    box-shadow: 15px 5px 8px grey, 10px 10px 8px purple;
-}
-
-.sign {
-    padding-top: 40px;
-    color:black;
-    
-    font-family : 'Ubuntu', Monospace;
-    font-weight: bold;
-    font-size: 32px;
-}
-
-.un {
-width: 76%;
-color: rgb(38, 50, 56);
-font-weight: 700;
-font-size: 14px;
-letter-spacing: 1px;
-background: rgba(136, 126, 126, 0.04);
-padding: 10px 20px;
-border: none;
-border-radius: 20px;
-outline: none;
-box-sizing: border-box;
-border: 2px solid rgba(0, 0, 0, 0.02);
-margin-bottom: 50px;
-margin-left: 46px;
-text-align: center;
-margin-bottom: 27px;
-font-family: 'Ubuntu', sans-serif;
-}
-
-form.form1 {
-    padding-top: 40px;
-}
-
-.pass {
-        width: 76%;
-color: rgb(38, 50, 56);
-font-weight: 700;
-font-size: 14px;
-letter-spacing: 1px;
-background: rgba(136, 126, 126, 0.04);
-padding: 10px 20px;
-border: none;
-border-radius: 20px;
-outline: none;
-box-sizing: border-box;
-border: 2px solid rgba(0, 0, 0, 0.02);
-margin-bottom: 50px;
-margin-left: 46px;
-text-align: center;
-margin-bottom: 27px;
-font-family: 'Ubuntu', sans-serif;
-}
-table, th, td {
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-    border: 2px solid black;
-    border-collapse: collapse;
-    height: 100px;
-
-  }
-td {
-    height: 50px;
-    vertical-align: bottom;
-    border-bottom: 1px solid #FEBA4F;
-  }
-th{
-  border-bottom: 1px solid #FEBA4F;
-  
-  background-color: #FD673A;
-
-}  
-tr:hover {background-color:#b64444;}
-.fn {
-    width: 76%;
-color: rgb(38, 50, 56);
-font-weight: 700;
-font-size: 14px;
-letter-spacing: 1px;
-background: rgba(136, 126, 126, 0.04);
-padding: 10px 20px;
-border: none;
-border-radius: 20px;
-outline: none;
-box-sizing: border-box;
-border: 2px solid rgba(0, 0, 0, 0.02);
-margin-bottom: 50px;
-margin-left: 46px;
-text-align: center;
-margin-bottom: 27px;
-font-family: 'Ubuntu', sans-serif;
-}
-.cn {
-    width: 76%;
-color: rgb(38, 50, 56);
-font-weight: 700;
-font-size: 14px;
-letter-spacing: 1px;
-background: rgba(136, 126, 126, 0.04);
-padding: 10px 20px;
-border: none;
-border-radius: 20px;
-outline: none;
-box-sizing: border-box;
-border: 2px solid rgba(0, 0, 0, 0.02);
-margin-bottom: 50px;
-margin-left: 46px;
-text-align: center;
-margin-bottom: 27px;
-font-family: 'Ubuntu', sans-serif;
-}
-.br {
-    width: 76%;
-color: rgb(38, 50, 56);
-font-weight: 700;
-font-size: 14px;
-letter-spacing: 1px;
-background: rgba(136, 126, 126, 0.04);
-padding: 10px 20px;
-border: none;
-border-radius: 20px;
-outline: none;
-box-sizing: border-box;
-border: 2px solid rgba(0, 0, 0, 0.02);
-margin-bottom: 50px;
-margin-left: 46px;
-text-align: center;
-margin-bottom: 27px;
-font-family: 'Ubuntu', sans-serif;
-}
-.em {
-    width: 76%;
-color: rgb(38, 50, 56);
-font-weight: 700;
-font-size: 14px;
-letter-spacing: 1px;
-background: rgba(136, 126, 126, 0.04);
-padding: 10px 20px;
-border: none;
-border-radius: 20px;
-outline: none;
-box-sizing: border-box;
-border: 2px solid rgba(0, 0, 0, 0.02);
-margin-bottom: 50px;
-margin-left: 46px;
-text-align: center;
-margin-bottom: 27px;
-font-family: 'Ubuntu', sans-serif;
-}
-
-
-.un:focus, .pass:focus,.fn:focus,.br:focus,.cn:focus,.em:focus {
-    border: 2px solid rgba(0, 0, 0, 0.18) !important;
-    border-color: black;
-    box-shadow: 0 0 8px 0 blueviolet;
-    
-}
-
-.submit {
+  border-radius: 4px;
+  background-color: black;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 20px;
+  padding: 9px;
+  width: 200px;
+  transition: all 0.5s;
   cursor: pointer;
-    border-radius: 5em;
-    color: #fff;
-    background: linear-gradient(to right,grey,blue,grey);
-    border: 0;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    font-family: 'Ubuntu', sans-serif;
-    margin-left: 35%;
-    font-size: 13px;
-    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+  margin: 5px;
+}
+.button1 {
+  border-radius: 4px;
+  background-color: black;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 30px;
+  padding: 20px;
+  width: 200px;
+  cursor: pointer;
+  margin: 95px;
+  
+}
+.button1 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
 }
 
-.forgot {
-    text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
-    color: #E1BEE7;
-    padding-top: 15px;
+.button1 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
 }
+
+.button1:hover span {
+  padding-right: 25px;
+}
+
+.button1:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+
 
 a {
-    text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
-    color: #E1BEE7;
-    text-decoration: none
+  text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
+  color: #E1BEE7;
+  text-decoration: none
 }
 
 @media (max-width: 600px) {
-    .main {
-        border-radius: 0px;
-    }}
+  .main {
+      border-radius: 0px;
+  }}
 
 ul {  
-      position: fixed;
-      top:0;
-      width:100%;
-      list-style-type: none;
-      margin: 0;
-      padding: 2px;
-      overflow: hidden;
-      background-color: black;
-    }
-    
+    position: fixed;
+    top:0;
+    width:100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 2px;
+    overflow: hidden;
+    background-color: black;
+    font-size:10px;
+  }
+  
 li {
-      float: left;
-      
-      border-right: 4px solid #bbb;
-    }
+    float: left;
     
+    border-right: 4px solid #bbb;
+  }
+  
 li:last-child {
-      border-right: none;
-    }
-    
+    border-right: none;
+  }
+  
 li a {
-      display: block;
-      color: white;
-      text-align: center;
-      padding: 27px 40px;
-      text-decoration: none;
-    }
-    
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 27px 40px;
+    text-decoration: none;
+  }
+  
 li a:hover {
-      background-color: #111;
-    }
+    background-color: #111;
+  }
 
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 80px;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size:40px;
+}
+.customers {
+font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+border-collapse: collapse;
+width: 100%;
+text-align: center;
+
+}
+
+.customers td, .customers th {
+border: 1px solid #ddd;
+padding: 8px;
+text-align: center;
+}
+
+.customers tr:nth-child(even){background-color: #f2f2f2;}
+
+.customers tr:hover {background-color: #ddd;}
+
+.customers th {
+padding-top: 12px;
+padding-bottom: 12px;
+text-align: left;
+background-color: #4CAF50;
+color: white;
+}
