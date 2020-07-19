@@ -1,5 +1,5 @@
 body {
-    background: black;
+    background-image:linear-gradient(to right,#4F97A3, #4682B4, #4682B4,#4F97A3,   #4682B4); 
     font-family: 'Ubuntu', Monospace;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -16,9 +16,9 @@ body {
 .btn{
     position: relative;
     display: block;
-    color:white;
+    color:black;
     font-size:20px;
-    font-family: "INK FREE";
+    font-family: 'Ubuntu', Monospace;
     margin:30px 23px;
     border:2px solid #ff7675;
     padding: 14px 60px;
